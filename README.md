@@ -225,11 +225,8 @@ h1, h2, h3, h4, h5, h6, p, span, div {
 .bottom-right {
   position: fixed;
   bottom: 20px;
-  right: 20px;
-  background-color: #f44336;
-  color: white;
+  right: 20px
   padding: 10px 20px;
-  text-decoration: none;
   border-radius: 5px;
 }
 </style>
