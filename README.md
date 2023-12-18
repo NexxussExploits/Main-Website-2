@@ -27,8 +27,3 @@ As a lifelong learner, I am always eager to take on new challenges and expand my
 - To learn: TS, Node JS, More JS, PHP, PY, C++, C#
 - Contributing to open-source projects
 
-## Get in Touch
-If you have any questions, suggestions, or just want to connect, feel free to reach out to me through the following channels:
-- Email: [your-email@example.com](mailto:your-email@example.com)
-- LinkedIn: [Your LinkedIn Profile](https://www.linkedin.com/in/your-linkedin-profile/)
-- Twitter: [@your-twitter-handle](https://twitter.com/your-twitter-handle)
