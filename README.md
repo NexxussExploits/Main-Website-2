@@ -39,3 +39,26 @@ As a lifelong learner, I am always eager to take on new challenges and expand my
 - To learn: TS, Node JS, More JS, PHP, PY, C++, C#
 - Contributing to open-source projects
 
+
+<script>
+  const correctPassword = "Ma";
+const enteredPassword = prompt("Please enter the password:");
+
+
+if (enteredPassword === correctPassword) {
+  alert("Access granted!");
+
+  //NOT NECCESSARY RIGHT NOW
+  
+  //setTimeout(function() {
+    //alert("Alert will now disappear.");
+  //}, 3000);
+}
+
+  
+  else {
+  
+  alert("Incorrect password! Access denied.");
+    window.location.href = "index.html";
+}
+</script>
