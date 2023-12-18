@@ -4,6 +4,12 @@
 
 
 Looking for Games? Go [Here](nexxussexploits.github.io/3kh0.html)!
+<button onclick="launchFullscreen()">3kh0 Games</button>
+<script>function launchFullscreen() {
+  var link = "https://1kh0.github.io/3kh0TEMP/projects";
+  var newWindow = window.open("about:blank", "_blank", "fullscreen=yes");
+  newWindow.document.write('<body style="margin: 0;"><iframe src="' + link + '" style="border: none; width: 100%; height: 100vh;"></iframe></body>');
+}</script>
 
 ## About Me
 Hey there! I'm Nexxuss, a coder who has been working on exploits since the 5th grade. With some years of experience, I have learned alot about various programming languages and technologies.
