@@ -1,9 +1,10 @@
 ## Welcome to Nexxuss!
+Looking for Games? <a onclick="launchFullscreen()">>Press this text<</a>!
 <b>Unblock Sites Blocked by Cisco:</b>
 ![image](https://github.com/NexxussExploits/nexxussexploits.github.io/assets/145407129/80ef8b46-bf67-4a34-93bd-27436162de78)
 
 
-Looking for Games? <a onclick="launchFullscreen()">>Press this text<</a>!
+
 
 <script>
   function launchFullscreen() {
