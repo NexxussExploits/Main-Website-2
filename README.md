@@ -3,7 +3,7 @@
 ![image](https://github.com/NexxussExploits/nexxussexploits.github.io/assets/145407129/80ef8b46-bf67-4a34-93bd-27436162de78)
 
 
-Looking for Games? Go <a onclick="launchFullscreen()">Here</a>
+Looking for Games? <a onclick="launchFullscreen()">>Press this text<</a>!
 
 <script>
   function launchFullscreen() {
