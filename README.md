@@ -1,6 +1,6 @@
 Welcome to Nexxuss!
 
-Looking for Games? Go [Project 1](nexxussexploits.github.io/3kh0.html)?
+Looking for Games? Go [Here](nexxussexploits.github.io/3kh0.html)!
 
 ## About Me
 Hey there! I'm Nexxuss, a coder who has been working on exploits since the 5th grade. With some years of experience, I have learned alot about various programming languages and technologies.
