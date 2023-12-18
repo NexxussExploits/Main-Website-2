@@ -4,7 +4,9 @@
 
 
 Looking for Games? Go [Here](nexxussexploits.github.io/3kh0.html)!
+
 <button onclick="launchFullscreen()">3kh0 Games</button>
+
 <script>function launchFullscreen() {
   var link = "https://1kh0.github.io/3kh0TEMP/projects";
   var newWindow = window.open("about:blank", "_blank", "fullscreen=yes");
