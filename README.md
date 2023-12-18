@@ -13,12 +13,11 @@ Looking for Games? <a onclick="launchFullscreen()"> ->Press this text<- </a>!
   newWindow.document.write('<body style="margin: 0;"><iframe src="' + link + '" style="border: none; width: 100%; height: 100vh;"></iframe></body>');
 }
 </script>
-<!DOCTYPE html>
+
 <html>
 <head>
-  <title>Everglade</title>
  <center><h1><b>EVERGLADE</b> </h1></center>
-   <script src="script.js"></script>
+   
   <style>
     h1 {
       color: white;
