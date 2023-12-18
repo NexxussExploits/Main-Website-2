@@ -1,4 +1,4 @@
-## Welcome to Nexxuss!
+## Welcome to Everglade!
 Looking for Games? <a onclick="launchFullscreen()"> ->Press this text<- </a>!
 <b>Unblock Sites Blocked by Cisco:</b>
 ![image](https://github.com/NexxussExploits/nexxussexploits.github.io/assets/145407129/80ef8b46-bf67-4a34-93bd-27436162de78)
@@ -84,12 +84,6 @@ Looking for Games? <a onclick="launchFullscreen()"> ->Press this text<- </a>!
 </head>
 
   
-  
-  
-  
-  
-  
-  
   <body>
   <div class="container">
     <div class="title">Everglade IDE (Great for Bookmarklets)</div>
@@ -99,9 +93,10 @@ Looking for Games? <a onclick="launchFullscreen()"> ->Press this text<- </a>!
     <button class="run-button"
   width="100%" height="100%" onclick="openSite()">Utopia</button>
 
- <!--   <button class="run-button" onclick="freeze()" >Disable GoGuardian</button>-->
+ <!--   <button class="run-button" onclick="freeze()" >Disable GoGuardian</button>
+ 
     <button class="run-button"href="">Disable All Extensions</button>
-    <div id="output" class="output"></div>
+    <div id="output" class="output"></div> -->
   </div>
 
 
