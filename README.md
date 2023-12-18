@@ -1,11 +1,9 @@
 ## Welcome to Everglade!
 Looking for Games? <a onclick="launchFullscreen()"> ->Press this text<- </a>
 <b>Unblock Sites Blocked by Cisco:</b>
+
 ![image](https://github.com/NexxussExploits/nexxussexploits.github.io/assets/145407129/6e853ca0-85ec-464d-b556-0acc661419e0)
 
-
-
-<title>Google</title>
 
 <script>
   function launchFullscreen() {
@@ -15,9 +13,8 @@ Looking for Games? <a onclick="launchFullscreen()"> ->Press this text<- </a>
 }
 </script>
 
-<html>
 <head>
- <center><h1><b>EVERGLADE</b> </h1></center>
+ <center><h1><b>EVERGLADE</b></h1></center>
    
   <style>
     h1 {
