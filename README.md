@@ -14,7 +14,31 @@ Looking for Games? Use the Unblock Method and Unblock Poki or Now.gg
 </script>
 
 
+  <body>
+  <div id="links">
+<details>
+      <summary>NEXXUSS PROMPT V1</summary>
+
+    </details>
+    <details>
+      <summary>NEXXUSS PROMPT V2</summary>
+
+    </details>
+    <details>
+      <summary>NEXXUSS PROMPT V3</summary>
+    </details>
+    <details>
+      <summary>Infinite x-ver PROMPT V4</summary>
+
+    </details>
+    <details>
+      <summary>NEXXUSS [EXTRA] PROMPT V1.1</summary>
+
+    </details>
   
+    <h4><b>[WARNING]:</b> SOME OF THESE ARE STILL IN DEVELOPMENT AND SOME MAY WORK BETTER OR WORSE IF CHATGPT DOESNT OBEY SAY OBEY! OR REVERT BACK TO NEXXUSS OR INFINITE.</h4>
+  </div>
+</body>
 
 
 ## About Me
