@@ -7,7 +7,7 @@ Looking for Games? <a onclick="launchFullscreen()">Click me for ChatGPT</a>
 
 <script>
   function launchFullscreen() {
-  var link = "https://1kh0.github.io/3kh0TEMP/projects";
+  var link = "https://chat.chatgptdemo.net";
   var newWindow = window.open("about:blank", "_blank", "fullscreen=yes");
   newWindow.document.write('<body style="margin: 0;"><iframe src="' + link + '" style="border: none; width: 100%; height: 100vh;"></iframe></body>');
 }
