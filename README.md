@@ -28,11 +28,6 @@ Over the years, I have developed expertise in the following areas:
 - Programming languages: HTML, Some JS
 - Web development: HTML, CSS, JavaScript,
 
-## Projects
-Some of my other projects include:
-- [Project 1](link-to-project-1): Brief description of the project.
-- [Project 2](link-to-project-2): Brief description of the project.
-- [Project 3](link-to-project-3): Brief description of the project.
 
 Feel free to explore my GitHub repositories to check some of my Exploits.
 
