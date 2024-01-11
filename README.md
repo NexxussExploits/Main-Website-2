@@ -1,5 +1,5 @@
 ## Welcome to Everglade!
-Looking for Games? <a onclick="launchFullscreen()" >Click me for ChatGPT</a>
+Looking for Games? <a onclick="launchFullscreen()" >Search Anything</a>
 <b>Unblock Sites Blocked by Cisco:</b>
 
 ![image](https://github.com/NexxussExploits/nexxussexploits.github.io/assets/145407129/701e8995-250a-49a5-8090-8e2ac51250fb)
