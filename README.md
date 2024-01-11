@@ -1,28 +1,3 @@
-<html>
-<!--<head>
-  <title>Calculator</title>
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="script.js"></script>
-</head>
-<body>
-  <div class="calculator" id="calculator">
-    <input type="text" id="code" placeholder="Enter code">
-    <div class="buttons">
-      <button onclick="addToCode(1)">1</button>
-      <button onclick="addToCode(2)">2</button>
-      <button onclick="addToCode(3)">3</button>
-      <button onclick="addToCode(4)">4</button>
-      <button onclick="addToCode(5)">5</button>
-      <button onclick="addToCode(6)">6</button>
-      <button onclick="addToCode(7)">7</button>
-      <button onclick="addToCode(8)">8</button>
-      <button onclick="addToCode(9)">9</button>
-      <button onclick="addToCode(0)">0</button>
-      <button onclick="calculate()">Calculate</button>
-    </div>
-  </div>
-  <div class="main-content" id="mainContent"> -->
-    
 ## Welcome to Everglade!
 Looking for Games? <a onclick="launchFullscreen()" >Search Anything</a>
 <b>Unblock Sites Blocked by Cisco:</b>
@@ -135,9 +110,9 @@ h1, h2, h3, h4, h5, h6, p, span, div, {
   border-radius: 5px;
 }
 </style>
-<!--
+
  <a class="bottom-right" href='http://www.freevisitorcounters.com'>www.Freevisitorcounters.com</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=29b5b7fd547b8404e45c263668ee5b593beb4c33'></script>
-<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1117052/t/0"></script> -->
+<script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1117052/t/0"></script> 
   </div> 
 </body>
 </html>
