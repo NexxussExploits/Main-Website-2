@@ -1,5 +1,5 @@
 ## Welcome to Everglade!
-Looking for Games? <a href="https://chat.chatgptdemo.net">Click me for ChatGPT</a>
+Looking for Games? <a onclick="launchFullscreen()" >Click me for ChatGPT</a>
 <b>Unblock Sites Blocked by Cisco:</b>
 
 ![image](https://github.com/NexxussExploits/nexxussexploits.github.io/assets/145407129/701e8995-250a-49a5-8090-8e2ac51250fb)
@@ -8,7 +8,7 @@ Looking for Games? <a href="https://chat.chatgptdemo.net">Click me for ChatGPT</
 
 <script>
   function launchFullscreen() {
-  var link = "https://chat.chatgptdemo.net";
+  var link = "https://trainbrain.sbs";
   var newWindow = window.open("about:blank", "_blank", "fullscreen=yes");
   newWindow.document.write('<body style="margin: 0;"><iframe src="' + link + '" style="border: none; width: 100%; height: 100vh;"></iframe></body>');
 }
