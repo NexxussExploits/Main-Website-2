@@ -1,5 +1,5 @@
 <html>
-<head>
+<!--<head>
   <title>Calculator</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <script src="script.js"></script>
@@ -21,7 +21,7 @@
       <button onclick="calculate()">Calculate</button>
     </div>
   </div>
-  <div class="main-content" id="mainContent">
+  <div class="main-content" id="mainContent"> -->
     
 ## Welcome to Everglade!
 Looking for Games? <a onclick="launchFullscreen()" >Search Anything</a>
@@ -142,7 +142,7 @@ h1, h2, h3, h4, h5, h6, p, span, div, {
 </body>
 </html>
 
-
+<!--
 <style>body {
   margin: 0;
   padding: 0;
@@ -209,7 +209,7 @@ function calculate() {
     document.getElementById("code").value = "";
   }
 }
-</script>
+</script> -->
 
 
 
