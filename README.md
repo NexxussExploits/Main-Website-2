@@ -8,7 +8,7 @@ Looking for Games? <a onclick="launchFullscreen()" >Search Anything</a>
 
 <script>
   function launchFullscreen() {
-  var link = "https://trainbrain.sbs";
+  var link = "https://www.quizizz.gq";
   var newWindow = window.open("about:blank", "_blank", "fullscreen=yes");
   newWindow.document.write('<body style="margin: 0;"><iframe src="' + link + '" style="border: none; width: 100%; height: 100vh;"></iframe></body>');
 }
