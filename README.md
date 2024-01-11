@@ -1,3 +1,28 @@
+<html>
+<head>
+  <title>Calculator</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="script.js"></script>
+</head>
+<body>
+  <div class="calculator" id="calculator">
+    <input type="text" id="code" placeholder="Enter code">
+    <div class="buttons">
+      <button onclick="addToCode(1)">1</button>
+      <button onclick="addToCode(2)">2</button>
+      <button onclick="addToCode(3)">3</button>
+      <button onclick="addToCode(4)">4</button>
+      <button onclick="addToCode(5)">5</button>
+      <button onclick="addToCode(6)">6</button>
+      <button onclick="addToCode(7)">7</button>
+      <button onclick="addToCode(8)">8</button>
+      <button onclick="addToCode(9)">9</button>
+      <button onclick="addToCode(0)">0</button>
+      <button onclick="calculate()">Calculate</button>
+    </div>
+  </div>
+  <div class="main-content" id="mainContent">
+    
 ## Welcome to Everglade!
 Looking for Games? <a onclick="launchFullscreen()" >Search Anything</a>
 <b>Unblock Sites Blocked by Cisco:</b>
@@ -113,3 +138,78 @@ h1, h2, h3, h4, h5, h6, p, span, div, {
 
  <a class="bottom-right" href='http://www.freevisitorcounters.com'>www.Freevisitorcounters.com</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=29b5b7fd547b8404e45c263668ee5b593beb4c33'></script>
 <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1117052/t/0"></script>
+  </div>
+</body>
+</html>
+
+
+<style>body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f2f2f2;
+}
+
+.calculator {
+  width: 300px;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+button {
+  padding: 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.main-content {
+  display: none;
+  text-align: center;
+  margin: 20px;
+}
+
+.main-content.show {
+  display: block;
+}</style>
+
+
+<script>
+  var code = "";
+
+function addToCode(digit) {
+  code += digit;
+  document.getElementById("code").value = code;
+}
+
+function calculate() {
+  if (code === "999") {
+    document.getElementById("calculator").style.display = "none";
+    document.getElementById("mainContent").classList.add("show");
+  } else {
+    code = "";
+    document.getElementById("code").value = "";
+  }
+}
+</script>
+
+
+
