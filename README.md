@@ -113,9 +113,7 @@ h1, h2, h3, h4, h5, h6, p, span, div, {
 
  <a class="bottom-right" href='http://www.freevisitorcounters.com'>www.Freevisitorcounters.com</a> <script type='text/javascript' src='https://www.freevisitorcounters.com/auth.php?id=29b5b7fd547b8404e45c263668ee5b593beb4c33'></script>
 <script type="text/javascript" src="https://www.freevisitorcounters.com/en/home/counter/1117052/t/0"></script> 
-  </div> 
-</body>
-</html>
+  
 
 <!--
 <style>body {
