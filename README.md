@@ -1,4 +1,4 @@
-## Welcome to Everglade!
+<!-- ## Welcome to Everglade!
 Looking for Games? <a onclick="launchFullscreen()" >Search Anything</a>
 <b>Unblock Sites Blocked by Cisco:</b>
 
