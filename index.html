@@ -221,10 +221,29 @@
         #chat-container .input button:hover {
             background-color: #5f73bc;
         }
+
+      .image-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 50px; /* Adjust the width and height as per your image size */
+  height: 50px;
+  border-radius: 50%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.image-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
     </style>
 </head>
 <body>
-    <div id="chat-widget">
+    <div class="image-button" id="chat-widget">
+      <img src="nexchat.png" alt="Button Image">
         <i class="fa fa-comments"></i>
     </div>
 
