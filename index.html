@@ -145,5 +145,144 @@
         color: black;
     }
   </style>
+
+
+  <head>
+    <style>
+        #chat-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: #7289da;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+
+        #chat-widget:hover {
+            background-color: #5f73bc;
+        }
+
+        #chat-widget i {
+            font-size: 24px;
+        }
+
+        #chat-container {
+            position: fixed;
+            bottom: 100px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            display: none;
+        }
+
+        #chat-container .header {
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-bottom: 1px solid #ccc;
+            font-weight: bold;
+        }
+
+        #chat-container .content {
+            padding: 10px;
+            height: 320px;
+            overflow-y: scroll;
+        }
+
+        #chat-container .input {
+            padding: 10px;
+            border-top: 1px solid #ccc;
+        }
+
+        #chat-container .input input[type="text"] {
+            width: 100%;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-widget">
+        <i class="fa fa-comments"></i>
+    </div>
+
+    <div id="chat-container">
+        <div class="header">Chat</div>
+        <div class="content" id="chat-content">
+            <!-- Chat messages will be displayed here -->
+        </div>
+        <div class="input">
+            <input type="text" id="chat-input" placeholder="Type your message">
+        </div>
+    </div>
+
+    <script>
+        // Function to send chat message to the server
+        function sendChatMessage(message) {
+            // Make an AJAX request to your server to store the chat message
+            // Replace this with your server-side code to store the chat message in a database
+            // Example using jQuery AJAX:
+            $.ajax({
+                url: '/store_chat_message.php',
+                method: 'POST',
+                data: {
+                    message: message
+                },
+                success: function(response) {
+                    // Handle success response if needed
+                },
+                error: function(error) {
+                    // Handle error response if needed
+                }
+            });
+        }
+
+        // Function to retrieve chat messages from the server
+        function getChatMessages() {
+            // Make an AJAX request to your server to retrieve the chat messages
+            // Replace this with your server-side code to fetch chat messages from the database
+            // Example using jQuery AJAX:
+            $.ajax({
+                url: '/get_chat_messages.php',
+                method: 'GET',
+                success: function(response) {
+                    // Handle success response
+                    var chatContent = document.getElementById('chat-content');
+                    chatContent.innerHTML = response; // Update the chat content with the retrieved messages
+                    chatContent.scrollTop = chatContent.scrollHeight; // Scroll to the bottom of the chat content
+                },
+                error: function(error) {
+                    // Handle error response if needed
+                }
+            });
+        }
+
+        // Event listener for clicking the chat widget
+        document.getElementById('chat-widget').addEventListener('click', function() {
+            document.getElementById('chat-container').style.display = 'block';
+            getChatMessages(); // Retrieve chat messages when the chat container is opened
+        });
+
+        // Event listener for sending chat message
+        document.getElementById('chat-input').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                var message = event.target.value;
+                sendChatMessage(message);
+                event.target.value = ''; // Clear the chat input field
+            }
+        });
+
+        // Polling to continuously retrieve chat messages from the server
+        setInterval(getChatMessages, 5000); // Adjust the interval as needed
+    </script>
+</body>
+</html>
 </head>
 <body>
