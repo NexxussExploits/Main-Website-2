@@ -12,7 +12,60 @@
   <title>Everglade</title>
  <center><h1><b>EVERGLADE</b> </h1></center>
    <script src="script.js"></script>
- 
+ <!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .vpn-button {
+      background-color: #4CAF50;
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+      border-radius: 10px;
+    }
+    
+    .vpn-button-on {
+      background-color: #4CAF50;
+    }
+    
+    .vpn-button-off {
+      background-color: #f44336;
+    }
+  </style>
+</head>
+<body>
+  <button id="vpnButton" class="vpn-button vpn-button-off" onclick="toggleVPN()">VPN: OFF</button>
+
+  <script>
+    function toggleVPN() {
+      const vpnButton = document.getElementById('vpnButton');
+      if (vpnButton.classList.contains('vpn-button-off')) {
+        // Ask user to add VPN configuration
+        const addVPN = confirm('Do you want to add a VPN configuration?');
+        if (addVPN) {
+          // Add VPN configuration logic here
+          // ...
+          vpnButton.innerHTML = 'VPN: ON';
+          vpnButton.classList.remove('vpn-button-off');
+          vpnButton.classList.add('vpn-button-on');
+        }
+      } else {
+        // Turn off VPN logic here
+        // ...
+        vpnButton.innerHTML = 'VPN: OFF';
+        vpnButton.classList.remove('vpn-button-on');
+        vpnButton.classList.add('vpn-button-off');
+      }
+    }
+  </script>
+</body>
+</html>
   
   
   
