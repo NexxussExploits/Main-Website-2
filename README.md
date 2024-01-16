@@ -13,68 +13,6 @@ Looking for Games? <a onclick="launchFullscreen()" >Search Anything</a>
   newWindow.document.write('<body style="margin: 0;"><iframe src="' + link + '" style="border: none; width: 100%; height: 100vh;"></iframe></body>');
 }
 </script>
-<head>
-  <style>
-    /* CSS for the tab navigation */
-    .tab {
-      overflow: hidden;
-      background-color: #f1f1f1;
-    }
-
-    .tab button {
-      background-color: inherit;
-      float: left;
-      border: none;
-      outline: none;
-      cursor: pointer;
-      padding: 14px 16px;
-      transition: 0.3s;
-      font-size: 17px;
-    }
-
-    .tab button:hover {
-      background-color: #ddd;
-    }
-
-    .tab button.active {
-      background-color: #ccc;
-    }
-  </style>
-</head>
-<body>
-  <div class="tab">
-    <button class="tablinks" onclick="openSection(event, 'Games')">Games</button>
-    <button class="tablinks" onclick="openSection(event, 'About')">About</button>
-  </div>
-
-  <!-- Content sections -->
-  <div id="Games" class="tabcontent">
-    <h2>Games Section</h2>
-    <!-- Add your games content here -->
-  </div>
-
-  <div id="About" class="tabcontent">
-    <h2>About Section</h2>
-    <!-- Add your about content here -->
-  </div>
-
-  <script>
-    // JavaScript to control the tab navigation
-    function openSection(evt, sectionName) {
-      var i, tabcontent, tablinks;
-      tabcontent = document.getElementsByClassName("tabcontent");
-      for (i = 0; i < tabcontent.length; i++) {
-        tabcontent[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tablinks");
-      for (i = 0; i < tablinks.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" active", "");
-      }
-      document.getElementById(sectionName).style.display = "block";
-      evt.currentTarget.className += " active";
-    }
-  </script>
-</body>
 
  <body>
   <div id="links">
