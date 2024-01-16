@@ -1,1 +1,142 @@
+<title>
+  Everglade
+</title>
 
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
+  
+  <title>Everglade</title>
+ <center><h1><b>EVERGLADE</b> </h1></center>
+   <script src="script.js"></script>
+ 
+  
+  
+  
+  
+  <div class="container">
+    <div class="title">Everglade IDE (Great for Bookmarklets)</div>
+    <textarea id="code" class="code-editor" placeholder="Enter your JavaScript code here (try some bookmarklets)..."></textarea>
+    <button id="run" class="run-button">Run</button>
+    <button class="run-button" src="https://shorturl.at/xILVY">Download Bookmarklets</button>
+
+    <!--   <button class="run-button" onclick="freeze()" >Disable GoGuardian</button>-->
+    <button class="run-button"href="">Disable All Extensions</button>
+    <div id="output" class="output"></div>
+  </div>
+
+
+
+      <script>
+     function freeze() {
+       javascript:(function() {
+           while(true) {}
+       })();
+     }
+
+
+      document.getElementById("run").addEventListener("click", function() {
+        var code = document.getElementById("code").value;
+        var output = document.getElementById("output");
+
+        try {
+          var result = eval(code);
+          output.innerHTML = result;
+        } catch (error) {
+          output.innerHTML = "Error: " + error.message;
+        }
+      });
+    </script>
+    <head>
+
+      <style>
+
+      </style>
+    </head>
+
+  <style>
+    h1 {
+      color: black;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: black;
+    }
+    .code-editor {
+      width: 100%;
+      height: 200px;
+      font-family: monospace;
+      font-size: 14px;
+      padding: 10px;
+      border: 1px solid #000;
+      border-radius: 5px;
+      resize: vertical;
+      background-color: white;
+    }
+    .run-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: bold;
+      text-align: center;
+      text-decoration: none;
+      color: #fff;
+      background-color: #4CAF50;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .run-button:hover {
+      background-color: #45a049;
+    }
+    .output {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      white-space: pre-wrap;
+      word-wrap: break-word;
+      color: black;
+    }
+    body {
+      background-color: black;
+    }
+    button {
+      background-color: #4CAF50; /* Green */
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+    }
+
+    h1, h2, h2, p, span, textarea, {
+      color: black;
+    }
+  </style>
+</head>
+<body>
