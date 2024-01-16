@@ -163,7 +163,26 @@ function calculate() {
     document.getElementById("code").value = "";
   }
 }
-</script> -->
+</script> 
+
+
+var password = "Ma";
+var audioFile = "gay.mp3";
+
+function checkPassword() {
+  var enteredPassword = document.getElementById("Ma").value;
+
+  if (enteredPassword === password) {
+    alert("Ma");
+    document.getElementById("Ma").value = "";
+  } else {
+    var audio = new Audio(audioFile);
+    audio.play();
+  }
+}
+
+
+-->
 
 
 
