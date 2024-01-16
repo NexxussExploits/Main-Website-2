@@ -146,8 +146,7 @@
     }
   </style>
 
-
-  <head>
+<head>
     <style>
         #chat-widget {
             position: fixed;
@@ -200,11 +199,27 @@
         #chat-container .input {
             padding: 10px;
             border-top: 1px solid #ccc;
+            display: flex;
         }
 
         #chat-container .input input[type="text"] {
-            width: 100%;
+            flex: 1;
             padding: 5px;
+            border-radius: 4px;
+        }
+
+        #chat-container .input button {
+            padding: 5px 10px;
+            margin-left: 10px;
+            border-radius: 4px;
+            background-color: #7289da;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #chat-container .input button:hover {
+            background-color: #5f73bc;
         }
     </style>
 </head>
@@ -220,67 +235,73 @@
         </div>
         <div class="input">
             <input type="text" id="chat-input" placeholder="Type your message">
+            <button id="chat-send-button">Send</button>
         </div>
     </div>
 
     <script>
-        // Function to send chat message to the server
         function sendChatMessage(message) {
-            // Make an AJAX request to your server to store the chat message
             // Replace this with your server-side code to store the chat message in a database
-            // Example using jQuery AJAX:
-            $.ajax({
-                url: '/store_chat_message.php',
+            // Example using fetch API:
+            fetch('/store_chat_message', {
                 method: 'POST',
-                data: {
-                    message: message
+                headers: {
+                    'Content-Type': 'application/json',
                 },
-                success: function(response) {
-                    // Handle success response if needed
-                },
-                error: function(error) {
-                    // Handle error response if needed
-                }
+                body: JSON.stringify({
+                    message: message,
+                }),
+            })
+            .then(response => response.json())
+            .then(data => {
+                // Handle success response if needed
+            })
+            .catch(error => {
+                // Handle error response if needed
             });
         }
 
-        // Function to retrieve chat messages from the server
         function getChatMessages() {
-            // Make an AJAX request to your server to retrieve the chat messages
             // Replace this with your server-side code to fetch chat messages from the database
-            // Example using jQuery AJAX:
-            $.ajax({
-                url: '/get_chat_messages.php',
-                method: 'GET',
-                success: function(response) {
-                    // Handle success response
-                    var chatContent = document.getElementById('chat-content');
-                    chatContent.innerHTML = response; // Update the chat content with the retrieved messages
-                    chatContent.scrollTop = chatContent.scrollHeight; // Scroll to the bottom of the chat content
-                },
-                error: function(error) {
-                    // Handle error response if needed
-                }
+            // Example using fetch API:
+            fetch('/get_chat_messages')
+            .then(response => response.json())
+            .then(data => {
+                // Handle success response
+                var chatContent = document.getElementById('chat-content');
+                chatContent.innerHTML = data.messages; // Update the chat content with the retrieved messages
+                chatContent.scrollTop = chatContent.scrollHeight; // Scroll to the bottom of the chat content
+            })
+            .catch(error => {
+                // Handle error response if needed
             });
         }
 
-        // Event listener for clicking the chat widget
         document.getElementById('chat-widget').addEventListener('click', function() {
-            document.getElementById('chat-container').style.display = 'block';
-            getChatMessages(); // Retrieve chat messages when the chat container is opened
-        });
-
-        // Event listener for sending chat message
-        document.getElementById('chat-input').addEventListener('keypress', function(event) {
-            if (event.key === 'Enter') {
-                var message = event.target.value;
-                sendChatMessage(message);
-                event.target.value = ''; // Clear the chat input field
+            var chatContainer = document.getElementById('chat-container');
+            chatContainer.style.display = chatContainer.style.display === 'block' ? 'none' : 'block';
+            if (chatContainer.style.display === 'block') {
+                getChatMessages();
             }
         });
 
-        // Polling to continuously retrieve chat messages from the server
-        setInterval(getChatMessages, 5000); // Adjust the interval as needed
+        document.getElementById('chat-send-button').addEventListener('click', function() {
+            var inputElement = document.getElementById('chat-input');
+            var message = inputElement.value;
+            if (message.trim() !== '') {
+                sendChatMessage(message);
+                inputElement.value = '';
+            }
+        });
+
+        document.getElementById('chat-input').addEventListener('keypress', function(event) {
+            if (event.key === 'Enter') {
+                event.preventDefault();
+                document.getElementById('chat-send-button').click();
+            }
+        });
+
+        setInterval(getChatMessages, 5000);
     </script>
 </body>
 </html>
