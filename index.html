@@ -1,0 +1,442 @@
+<!-- Closes tab if ENTER is pushed -->
+
+<head>
+  <script>document.addEventListener('keydown', function (event) {
+      if (event.key === 'Enter') {
+        window.close(); // Close the tab
+        history.pushState({}, '', ''); // Clear the browsing history
+      }
+    });
+  </script>
+
+
+  <!-- Disables Extensions -->
+  <script>
+    Object.defineProperty(navigator, 'webdriver', {
+      get: () => false,
+    });
+  </script>
+
+  <script>
+    const detectExtensions = () => {
+      const extensionDetector = window.setTimeout(() => {
+        // If an extension is detected, disable it
+        const extensions = chrome.extension.getBackgroundPage();
+        if (extensions) {
+          extensions.disable();
+        }
+      }, 1000);
+    };
+    detectExtensions();
+  </script>
+
+
+
+  <!-- Main HTML -->
+  <title>Google</title>
+  <link rel="icon" type="image/png" href="https://google.com/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" type="module"></script>
+</head>
+<script> window.history.pushState({}, "", "https://www.google.com");
+</script>
+<head>
+  <script>
+    window.onload = function() {
+      var deviceInfo = "Device Information:\n" +
+        "Browser: " + navigator.userAgent + "\n" +
+        "Screen Resolution: " + window.screen.width + "x" + window.screen.height + "\n" +
+        "Operating System: " + navigator.platform;
+
+      var message = "You're up!\n" + deviceInfo;
+
+      alert(message);
+    };
+  </script>
+</head>
+<!-- Fullscreen IFrame if tab is Switched-->
+
+< <script>document.addEventListener("visibilitychange", function () {
+  if (document.visibilityState === "hidden") {
+  var iframe = document.createElement("iframe");
+  iframe.src = "https://www.google.com/webhp?igu=1";
+  iframe.style.position = "fixed";
+  iframe.style.top = "0";
+  iframe.style.left = "0";
+  iframe.style.width = "100%";
+  iframe.style.height = "100%";
+  iframe.style.border = "none";
+  iframe.style.zIndex = "9999";
+  document.body.appendChild(iframe);
+
+  //document.addEventListener("keydown", function (event) {
+  //if (event.key === "Enter") {
+  //iframe.remove();
+  // }
+  // });
+  }
+  });
+  </script>
+
+  <!-- Sniperlyfe - Nexxuss Effect -->
+  <style>
+    .letter {
+      text-transform: uppercase;
+      perspective: 1000px;
+    }
+
+    .letter h1 {
+      display: inline-block;
+      transition: transform 0.3s;
+      transform-style: preserve-3d;
+    }
+
+    .letter:hover h1 {
+      transform: rotateY(180deg);
+    }
+  </style>
+  <!-- AUTOMATIC FULLSCREEN
+A LITTLE SLOW BUT WORKING!  -->
+
+  <head>
+    <script>
+      function enterFullscreen() {
+        var element = document.documentElement;
+        if (element.requestFullscreen) {
+          element.requestFullscreen();
+        } else if (element.mozRequestFullScreen) {
+          element.mozRequestFullScreen();
+        } else if (element.webkitRequestFullscreen) {
+          element.webkitRequestFullscreen();
+        } else if (element.msRequestFullscreen) {
+          element.msRequestFullscreen();
+        }
+      }
+    </script>
+  </head>
+
+
+  <!--  HAMBURGER MENU! -->
+  <input type="checkbox" id="navi-toggle" class="checkbox" />
+  <label for="navi-toggle" class="button">
+    <span class="icon">&nbsp;</span>
+  </label>
+  <div class="background">&nbsp;</div>
+
+  <!-- nav -->
+  <nav class="nav">
+    <ul class="list">
+      <li class="item"> <a
+          href="https://secure.nexxuss.repl.co/10293845748392034945287342938145275934182452743914823524731485762184054673184542793180596475387.html"
+          class="link">Games</a> </li>
+
+      <li class="item"> <a href="MainHtml/games.html" class="link">Games 2</a> </li>
+
+      <li class="item"> <a href="MainHtml/gpt.html">Chat GPT</a> </li>
+      <!--  <li class="item">
+         <a class="MainHtml/astroid.gg.html">Astroid.gg</a>
+      </li>
+      <li class="link"> <a class="MainHtml/Kaz.html">Kazwire</a> </li> -->
+      <!--
+      <li class="link"> <a class="link"> Link 6 </a> </li> -->
+    </ul>
+  </nav </body>
+
+  <!-- Main Page -->
+
+  <body>
+
+
+
+    <main>
+      <H1>NEXXUSS</H1>
+      <p> Welcome to Nexxuss! </p>
+
+      <p> Here you can play games, chat with GPT, and more! </p> 
+      </p>
+
+
+
+      <h3>Click Me:</h3>
+      <ul>
+
+
+
+
+
+
+
+
+
+        <li><a href="https://chat.chatgptdemo.net/" target="_blank" rel="noreferrer noopener">Chat GPT</a></li>
+
+
+
+
+        <li>
+          <a onclick="openInstructions()">Open Instructions</a>
+
+          <div id="warningModal" class="modal">
+            <div class="modal-content">
+              <span class="close" onclick="closeInstructions()">&times;</span>
+              <p>Warning: Please follow the instructions carefully.</p>
+              <p>IF AT ANYTIME YOU WANT TO LEAVE THE SITE THEN HIT THE ENTER BUTTON AND THE TAB WILL CLOSE. IF YOU
+                SWITCH
+                TABS A OVERLAY (FRAME) OF GOOGLE.COM WILL APPEAR. TO GET RID OF THIS SIMPLY RELOAD THE PAGE AND IT WILL
+                BE
+                GONE</p>
+
+            </div>
+          </div>
+
+          <script>
+            function openInstructions() {
+              document.getElementById("warningModal").style.display = "block";
+            }
+
+            function closeInstructions() {
+              document.getElementById("warningModal").style.display = "none";
+            }
+          </script>
+
+          <style>
+            .modal {
+              display: none;
+              position: fixed;
+              z-index: 1;
+              left: 0;
+              top: 0;
+              width: 100%;
+              height: 100%;
+              overflow: auto;
+              background-color: rgba(0, 0, 0, 0.5);
+            }
+
+            .modal-content {
+              background-color: #000000;
+              margin: 15% auto;
+              padding: 20px;
+              border: 1px solid #888;
+              width: 80%;
+            }
+
+            .close {
+              color: #aaa;
+              float: right;
+              font-size: 28px;
+              font-weight: bold;
+              cursor: pointer;
+            }
+
+            .close:hover,
+            .close:focus {
+              color: #000;
+              text-decoration: none;
+              cursor: pointer;
+            }
+          </style>
+        </li>
+
+        <li> <a onclick="Blank()">Open site in About:Blank</a></li>
+
+        <script>
+          function Blank() {
+            javascript: (function () {var url = prompt("", ""); var urlObj = new window.URL(window.location.href); win = window.open(); win.document.body.style.margin = "0"; win.document.body.style.height = "100vh"; var iframe = win.document.createElement("iframe"); iframe.style.border = "none"; iframe.style.width = "100%"; iframe.style.height = "100%"; iframe.style.margin = "0"; iframe.referrerpolicy = "no-referrer"; iframe.allow = "fullscreen"; iframe.src = url.toString(); win.document.body.appendChild(iframe); var script = win.document.createElement("script"); script.src = "https://3kh0.github.io/js/main.js"; win.document.body.appendChild(script);})();
+
+          }
+        </script>
+
+      </ul>
+    </main>
+    <footer>
+      <p>Copyright © 2023 CyberTank</p>
+    </footer>
+    <input type="color" id="accent-picker">
+
+
+    <canvas width="934" height="746" style="top: 0px; left: 0px; pointer-events: none; position: fixed;"></canvas>
+  </body>
+
+  <!-- NO CODE VIEW SCRIPT-->
+
+  <script>
+    document.onkeydown = function (e) {
+      if (event.keyCode == 123) {
+        return false;
+      }
+      if (e.ctrlKey && e.keyCode == 'E'.charCodeAt(0)) {
+        return false;
+      }
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+        return false;
+      }
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+        return false;
+      }
+      if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+        return false;
+      }
+      if (e.ctrlKey && e.keyCode == 'S'.charCodeAt(0)) {
+        return false;
+      }
+      if (e.ctrlKey && e.keyCode == 'H'.charCodeAt(0)) {
+        return false;
+      }
+      if (e.ctrlKey && e.keyCode == 'A'.charCodeAt(0)) {
+        return false;
+      }
+      if (e.ctrlKey && e.keyCode == 'E'.charCodeAt(0)) {
+        return false;
+      }
+    }
+  </script>
+
+  <script>
+    document.addEventListener('contextmenu', function (e) {
+      e.preventDefault();
+    });
+
+  </script>
+
+
+  <!-- About:Blank System -->
+
+
+  <button class="blank">Launch A:B</button>
+  <script>
+    var urlObj = new window.URL(window.location.href);
+    var url = "https://nexxuss.repl.co";
+    if (url) {
+      var win;
+
+      document.querySelector('button').onclick = function () {
+        if (win) {
+          win.focus();
+        } else {
+          win = window.open();
+          win.document.body.style.margin = '0';
+          win.document.body.style.height = '100vh';
+          var iframe = win.document.createElement('iframe');
+          iframe.style.border = 'none';
+          iframe.style.width = '100%';
+          iframe.style.height = '100%';
+          iframe.style.margin = '0';
+          iframe.src = url;
+          win.document.body.appendChild(iframe);
+          window.close(); // Close the original tab
+        }
+        document.querySelector('button').style.background = 'grey';
+        document.querySelector('button').innerHTML = "Already Open";
+
+        iframe.addEventListener('unload', function (event) {
+          event.preventDefault();
+        });
+
+        iframe.setAttribute("sandbox", "allow-scripts allow-forms allow-pointer-lock allow-same-origin");
+        iframe.setAttribute("allowfullscreen", "");
+
+        win.document.head.innerHTML += '<link rel="shortcut icon" href="https://google.com/favicon.ico" type="image/x-icon">';
+        win.document.title = "Google";
+        win.document.icon = "google.png"
+
+        win.document.body.appendChild(iframe);
+      };
+    }
+
+
+  </script>
+
+
+  <!-- WIDGET AND COUNTER -->
+
+
+  </script>
+  <script src='https://cdn.jsdelivr.net/npm/@widgetbot/crate@3' async defer>
+    new Crate({
+      server: '1061853693214998598', // Hack-Net The Ultimate Hacking Guides and Experience.
+      channel: '1099470492907352174' // #hacknet-main
+    })
+  </script>
+
+
+  <div align='center'><a href='https://www.free-website-hit-counter.com'><img
+        src='https://www.free-website-hit-counter.com/c.php?d=9&id=152841&s=39' border='0'
+        alt='Free Website Hit Counter'></a><br /><small></small></div>
+
+
+
+
+  <style>
+    #bottom {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  </style>
+
+
+
+  <html>
+
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.23/dist/vanta.clouds.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        VANTA.CLOUDS({
+          el: 'body',
+          skyColor: 0x1a1a1a,
+          cloudColor: 0x7f7f7f,
+          cloudShadowColor: 0x000000,
+          speed: 1.5,
+          zoom: 0.6
+        });
+      });
+    </script>
+  </head>
+
+  <body>
+    <!-- H1 Text Fill CSS  -->
+    <style>
+      h1 {
+        text-align: center;
+        background-image: url('Images/H1fill.gif');
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-width: 90%;
+        width: 100%;
+        margin: 0 auto;
+      }
+    </style>
+    <!-- Tab Cloaker -->
+    <!--
+    <script type="text/javascript">
+      window.onload = function () {
+        javascript: (function () {var link = document.querySelector("link[rel*='icon']") || document.createElement('link'); link.type = 'image/x-icon'; link.rel = 'shortcut icon'; link.href = 'https://ssl.gstatic.com/docs/doclist/images/infinite_arrow_favicon_5.ico'; document.title = 'My Drive - Google Drive'; console.log(document.title); document.getElementsByTagName('head')[0].appendChild(link);})();
+      }  
+    </script> -->
+
+
+    <!-- Automatic A:B -->
+    <script window.onload=function () { var urlObj=new window.URL(window.location.href); var
+      url="https://nexxuss.repl.co" ; if (url) { var win; document.querySelector('button').onclick=function () { if
+      (win) { win.focus(); } else { win=window.open(); win.document.body.style.margin='0' ;
+      win.document.body.style.height='100vh' ; var iframe=win.document.createElement('iframe');
+      iframe.style.border='none' ; iframe.style.width='100%' ; iframe.style.height='100%' ; iframe.style.margin='0' ;
+      iframe.src=url; win.document.body.appendChild(iframe); window.close(); // Close the original tab }
+      document.querySelector('button').style.background='grey' ;
+      document.querySelector('button').innerHTML="Already Open" ; iframe.addEventListener('unload', function (event) {
+      event.preventDefault(); });
+      iframe.setAttribute("sandbox", "allow-scripts allow-forms allow-pointer-lock allow-same-origin" );
+      iframe.setAttribute("allowfullscreen", "" ); win.document.head.innerHTML
+      +='<link rel="shortcut icon" href="https://google.com/favicon.ico" type="image/x-icon">' ;
+      win.document.title="Google" ; win.document.icon="google.png" win.document.body.appendChild(iframe); }; } </script>
+        </body >
+
+  </html >
