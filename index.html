@@ -20,6 +20,32 @@
     margin-right: 10px;
 }
 </style>
+<script>
+function updateFPS() {
+    let fpsElement = document.getElementById('fps');
+    let fps = Math.round(1 / (performance.now() / 1000));
+    fpsElement.innerText = `FPS: ${fps}`;
+}
+
+// Function to update Ping value
+function updatePing() {
+    let pingElement = document.getElementById('ping');
+    let startTime = performance.now();
+    fetch('https://www.example.com') // Replace 'https://www.example.com' with the URL you want to ping
+        .then(() => {
+            let endTime = performance.now();
+            let ping = Math.round(endTime - startTime);
+            pingElement.innerText = `Ping: ${ping} ms`;
+        })
+        .catch(() => {
+            pingElement.innerText = `Ping: N/A`;
+        });
+}
+
+// Call the updateFPS and updatePing functions every second (1000ms)
+setInterval(updateFPS, 1000);
+setInterval(updatePing, 1000);
+</script>
 
 <!-- Closes tab if ENTER is pushed -->
 
