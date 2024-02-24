@@ -230,7 +230,7 @@ ul {
 }
 
 body {
-  cursor: url('Images/cursor.gif') 16 16, pointer;
+  cursor: url('images/cursor.gif') 16 16, default;
 }
 
 
