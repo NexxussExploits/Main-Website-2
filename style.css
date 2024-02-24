@@ -230,7 +230,7 @@ ul {
 }
 
 body {
-  cursor: url('cursor.png') 16 16, pointer;
+  cursor: url('Images/cursor.gif') 16 16, pointer;
 }
 
 
@@ -290,6 +290,3 @@ button:hover:before {
   opacity: 1;
   animation: animate 8s linear infinite;
 }
-
-
-
