@@ -246,6 +246,32 @@
 }
     </style>
 </head>
+
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="https://www.google.com/favicon.ico">
+</head>
+<body>
+<form onsubmit="openWebsite(); return false;">
+  <label for="website">Enter website URL:</label>
+  <input type="text" id="website" placeholder="example.com">
+  <button type="submit">Go</button>
+</form>
+
+<script>
+function openWebsite() {
+  var websiteUrl = document.getElementById("website").value;
+  var newTab = window.open('about:blank');
+  newTab.document.title = 'Google';
+  newTab.document.head.innerHTML += '<link rel="icon" type="image/x-icon" href="https://www.google.com/favicon.ico">';
+  newTab.location.href = 'http://' + websiteUrl;
+}
+</script>
+</body>
+  
 <body>
     <div class="image-button" id="chat-widget">
       <img src="NexChat_Icon.png" alt="Button Image">
