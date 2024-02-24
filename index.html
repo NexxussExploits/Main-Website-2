@@ -618,4 +618,40 @@ A LITTLE SLOW BUT WORKING!  -->
         color: black;
     }
   </style>
+      <body>
+  <h1>Custom Cursor Selector</h1>
+  
+  <label for="cursorType">Select Cursor Type:</label>
+  <select id="cursorType">
+    <option value="default">Default</option>
+    <option value="pointer">Pointer</option>
+    <option value="progress">Loading</option>
+    <!-- Add more cursor types as needed -->
+  </select>
+  
+  <br><br>
+  
+  <label for="cursorImage">Upload Custom Cursor Image:</label>
+  <input type="file" id="cursorImage">
+  
+  <script>
+    const cursorTypeSelect = document.getElementById('cursorType');
+    const cursorImageInput = document.getElementById('cursorImage');
+    
+    cursorTypeSelect.addEventListener('change', function() {
+      document.body.style.cursor = cursorTypeSelect.value;
+    });
+    
+    cursorImageInput.addEventListener('change', function() {
+      const file = cursorImageInput.files[0];
+      const reader = new FileReader();
+      
+      reader.onload = function(e) {
+        document.body.style.cursor = `url(${e.target.result}), auto`;
+      };
+      
+      reader.readAsDataURL(file);
+    });
+  </script>
+</body>
   </html >
