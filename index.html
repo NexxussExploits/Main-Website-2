@@ -29,8 +29,10 @@ function updateFPS() {
     fpsCounter++;
     let delta = (performance.now() - lastCalledTime) / 1000;
 
-    if (delta > 1) {
+    if (delta >= 1) {
         let fps = fpsCounter / delta;
+        let randomOffset = Math.random() * 2 - 1; // Generate a random offset between -1 and 1
+        fps += randomOffset; // Add the random offset to the FPS value
         fpsElement.innerText = `FPS: ${Math.round(fps)}`;
         fpsCounter = 0;
         lastCalledTime = performance.now();
