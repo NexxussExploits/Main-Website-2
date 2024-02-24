@@ -247,6 +247,7 @@
     </style>
 </head>
 
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -259,16 +260,17 @@
   <button type="submit">Go</button>
 </form>
 
+<iframe id="websiteFrame" style="width: 100%; height: 80vh;"></iframe>
+
 <script>
 function openWebsite() {
   var websiteUrl = document.getElementById("website").value;
-  var newTab = window.open('about:blank');
-  newTab.document.title = 'Google';
-  newTab.document.head.innerHTML += '<link rel="icon" type="image/x-icon" href="https://www.google.com/favicon.ico">';
-  newTab.location.href = 'http://' + websiteUrl;
+  document.getElementById("websiteFrame").src = 'about:blank';
+  document.getElementById("websiteFrame").contentWindow.location.href = 'http://' + websiteUrl;
 }
 </script>
 </body>
+</html>
   
 <body>
     <div class="image-button" id="chat-widget">
