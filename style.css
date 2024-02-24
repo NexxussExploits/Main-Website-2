@@ -314,15 +314,6 @@ $lg: new-breakpoint(min-width 1024px);
 }
 
 
-body {
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 100%;
-	height: 100vh;
-	// background-color:darken($color-1, 4%);
-}
 
 div {
 	font-size: 200px;	
