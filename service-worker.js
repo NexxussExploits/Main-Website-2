@@ -1,13 +1,15 @@
-self.addEventListener('beforeinstallprompt', (event) => {
-       // Prevent Chrome 67 and earlier from automatically showing the prompt
-       event.preventDefault();
-       // Stash the event so it can be triggered later.
-       deferredPrompt = event;
-       // Update UI to notify the user they can add to home screen
-       showInstallPromotion();
-     });
+self.addEventListener('install', (event) => {
+  event.waitUntil(
+    self.registration.showNotification('Install this site', {
+      actions: [{ action: 'install', title: 'Install' }],
+      body: 'Add this site to your home screen for quick access.'
+    })
+  );
+});
 
-     function showInstallPromotion() {
-       // Your logic to display the install prompt to the user
-     }
-     
+self.addEventListener('notificationclick', (event) => {
+  if (event.action === 'install') {
+    event.notification.close();
+    // Logic to prompt the user to install the site
+  }
+});
