@@ -618,5 +618,58 @@ A LITTLE SLOW BUT WORKING!  -->
         color: black;
     }
   </style>
+
+      <!-- EXTENSION LOADER FOR SITE -->
+      <style>
+    #extensionIcon {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+    }
+</style>
+</head>
+<body>
+<h1>CRX Extension Loader</h1>
+
+<label for="extensionFile">Upload .CRX Extension File:</label>
+<input type="file" id="extensionFile">
+<button onclick="loadExtension()">Submit</button>
+
+<div id="extensionIcon"></div>
+
+<script>
+    function loadExtension() {
+        const fileInput = document.getElementById('extensionFile');
+        const extensionIcon = document.getElementById('extensionIcon');
+
+        if (fileInput.files.length > 0) {
+            const file = fileInput.files[0];
+            const reader = new FileReader();
+
+            reader.onload = function(e) {
+                // Save the extension data to localStorage
+                localStorage.setItem('extensionData', e.target.result);
+
+                // Display the extension icon
+                extensionIcon.innerHTML = `<img src="extension-icon.png" alt="Extension Icon" width="50">`;
+            };
+
+            reader.readAsDataURL(file);
+        } else {
+            alert('Please select a file to upload.');
+        }
+    }
+
+    // Check if extension data exists in localStorage on page load
+    window.onload = function() {
+        const extensionData = localStorage.getItem('extensionData');
+        if (extensionData) {
+            const extensionIcon = document.getElementById('extensionIcon');
+            extensionIcon.innerHTML = `<img src="extension-icon.png" alt="Extension Icon" width="50">`;
+        }
+    };
+</script>
+</body>
+</html>
       
   </html >
